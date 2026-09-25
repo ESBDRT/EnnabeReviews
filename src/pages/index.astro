@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Gamecard from '../components/Gamecard.astro';
+import { games } from '../data/games';
+---
+
+<Layout>
+  <section class="home-intro" aria-labelledby="intro-title">
+    <h1 id="intro-title">Find your next game.</h1>
+    <p>My personal thoughts and opinions on games i've played, written my own way (i can't write for shit)</p>
+    <a class="explore-reviews" href="/collection/">Explore all reviews</a>
+  </section>
+  <div class="review-grid" id="review-results">
+    {games.map((game) => <Gamecard {...game} />)}
+  </div>
+</Layout>

@@ -1,0 +1,19 @@
+## 1 - Tomb Raider (2013)
+
+## RATING
+
+3.5/5
+
+Explore the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. 
+Armed only with raw instincts and the ability to push beyond the limits of human endurance, with the help of the Endurance crew, Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold.
+
+For a game that came out in 2013, 13 years later, it is still visually good looking.
+However, behind that visual beauty is a game that feels somewhat rushed.
+
+The game starts very fast. After pressing start, a 1min30 seconds cinematic later, you're arleady right in the action. 
+There is barely any introduction to the Endurance crew, some of them seem to be long time partners, but that's all you can deduct.
+This leads to the game struggling to make you feel any emotions towards anybody in the crew nor Lara, and the voice acting or the soundtrack does not let a mark on you.
+
+Gameplay-wise, the game feels smooth and is fun to play, but there are some things more mentionning. You cannot sprint faster by pressing a key in this game, which is fine, could be a way to slow down the pace of the game, but almost every movement animation like jumping and sliding in particular is SUPER fast. This makes Lara feel as light as a feather and, to some extent, almost weightless. One very regrettable thing, immersion-wise, is the way weapons are handled. You're carrying several weapons, and even though Lara could visually carry all of them, as soon as you switch to one, the others simply become invisible. 
+
+In the end, the game is fun and i enjoyed playing it, but i didn't leave a mark on me.

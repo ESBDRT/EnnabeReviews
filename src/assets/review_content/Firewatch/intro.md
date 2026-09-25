@@ -1,0 +1,1 @@
+Fleeing away from his life problems, Henry takes a Fire Lookout summer job hoping for some peace of mind. But things will not go as planned..

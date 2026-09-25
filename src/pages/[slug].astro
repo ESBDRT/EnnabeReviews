@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { games } from "../data/games";
+
+export function getStaticPaths() {
+  return games.map((game) => ({
+    params: { slug: game.slug },
+    props: game,
+  }));
+}
+
+const { title, intro, image, genre, rating, review} = Astro.props;
+---
+
+<Layout>
+  <article class="game-review">
+    <header class="review-heading">
+        <h1>{title}</h1>
+        <p class="eyebrow">{genre}</p>
+      <p class="review-description">{intro}</p>
+    </header>
+        <img
+            class="review-cover"
+            src={image}
+            alt={title}
+            fetchpriority="high"
+        />
+    <div class="article-layout">
+        <div class="review-prose">
+            {review.map((Review) => <Review />)}
+            {rating && <p class="review-rating">{rating}</p>}
+        </div>
+    </div>
+  </article>
+</Layout>

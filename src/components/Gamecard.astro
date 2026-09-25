@@ -1,0 +1,24 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  intro: string;
+  image: string;
+  genre: string;
+}
+
+const { slug, title, intro, image, genre } = Astro.props;
+---
+
+<article class="review-card">
+    <a class="card-link" href={`/${slug}/`}>
+      <div class="card-art card-art-image">
+        <img src={image} alt={title} decoding="async" />
+      </div>
+      <div class="card-content">
+        <p class="eyebrow">{genre}</p>
+        <h2 class="card-title">{title}</h2>
+        <p>{intro}</p>
+      </div>
+    </a>
+</article>

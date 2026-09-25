@@ -1,0 +1,48 @@
+<div class="page-heading">
+  <h1 id="reviews-title">Search for a specific review</h1>
+  <p>Find your next game, or revisit an old favorite.</p>
+</div>
+<div class="search-panel" hidden>
+  <label for="review-search">Search by game, genre, or keyword</label>
+  <input
+    id="review-search"
+    type="search"
+    placeholder="Cyberpunk 2077 | Narrative"
+    autocomplete="off"
+    aria-controls="review-results"
+  />
+  <p id="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+</div>
+<noscript>
+  <p class="search-fallback">
+    All reviews are listed below. Enable JavaScript to search the collection.
+  </p>
+</noscript>
+
+<script>
+  const panel = document.querySelector<HTMLElement>('.search-panel');
+  const input = document.querySelector<HTMLInputElement>('#review-search');
+  const status = document.querySelector<HTMLElement>('#search-status');
+  const results = document.querySelector<HTMLElement>('#review-results');
+
+  if (panel && input && status && results) {
+    const cards = Array.from(results.querySelectorAll<HTMLElement>('.review-card'));
+    const filterReviews = () => {
+      const query = input.value.trim().toLowerCase();
+      let count = 0;
+
+      for (const card of cards) {
+        card.hidden = !(card.textContent ?? '').toLowerCase().includes(query);
+        if (!card.hidden) count++;
+      }
+
+      status.textContent = count === 0
+        ? 'No reviews found. Try another game, genre, or keyword.'
+        : `${count} ${count === 1 ? 'review' : 'reviews'} found.`;
+    };
+
+    panel.hidden = false;
+    input.addEventListener('input', filterReviews);
+    filterReviews();
+  }
+</script>
