@@ -1,0 +1,45 @@
+import image_s1_320 from './s1-320w.webp';
+import image_s1_640 from './s1-640w.webp';
+import image_s1_960 from './s1-960w.webp';
+import image_s1_1280 from './s1-1280w.webp';
+import image_s1_1920 from './s1-1920w.webp';
+import image_s1_2560 from './s1-2560w.webp';
+import image_s1_3840 from './s1.webp';
+import image_s2_320 from './s2-320w.webp';
+import image_s2_640 from './s2-640w.webp';
+import image_s2_960 from './s2-960w.webp';
+import image_s2_1280 from './s2-1280w.webp';
+import image_s2_1920 from './s2-1920w.webp';
+import image_s2_2560 from './s2-2560w.webp';
+import image_s2_3840 from './s2.webp';
+import image_s3_320 from './s3-320w.webp';
+import image_s3_640 from './s3-640w.webp';
+import image_s3_960 from './s3-960w.webp';
+import image_s3_1280 from './s3-1280w.webp';
+import image_s3_1920 from './s3-1920w.webp';
+import image_s3_2560 from './s3-2560w.webp';
+import image_s3_3840 from './s3.webp';
+
+export const lifeIsStrangeImages = {
+  "s1": {
+    src: image_s1_3840.src,
+    width: 3840,
+    height: 2160,
+    srcset: `${image_s1_320.src} 320w, ${image_s1_640.src} 640w, ${image_s1_960.src} 960w, ${image_s1_1280.src} 1280w, ${image_s1_1920.src} 1920w, ${image_s1_2560.src} 2560w, ${image_s1_3840.src} 3840w`,
+    sizes: '(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px',
+  },
+  "s2": {
+    src: image_s2_3840.src,
+    width: 3840,
+    height: 2160,
+    srcset: `${image_s2_320.src} 320w, ${image_s2_640.src} 640w, ${image_s2_960.src} 960w, ${image_s2_1280.src} 1280w, ${image_s2_1920.src} 1920w, ${image_s2_2560.src} 2560w, ${image_s2_3840.src} 3840w`,
+    sizes: '(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px',
+  },
+  "s3": {
+    src: image_s3_3840.src,
+    width: 3840,
+    height: 2160,
+    srcset: `${image_s3_320.src} 320w, ${image_s3_640.src} 640w, ${image_s3_960.src} 960w, ${image_s3_1280.src} 1280w, ${image_s3_1920.src} 1920w, ${image_s3_2560.src} 2560w, ${image_s3_3840.src} 3840w`,
+    sizes: '(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px',
+  },
+};

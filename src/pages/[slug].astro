@@ -10,7 +10,7 @@ export function getStaticPaths() {
   }));
 }
 
-const { title, intro, image, genre, rating, review} = Astro.props;
+const { title, intro, image, imageSrcset, genre, rating, review } = Astro.props;
 ---
 
 <Layout>
@@ -23,6 +23,8 @@ const { title, intro, image, genre, rating, review} = Astro.props;
         <img
             class="review-cover"
             src={image}
+            srcset={imageSrcset}
+            sizes={imageSrcset ? '(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px' : undefined}
             alt={title}
             fetchpriority="high"
         />

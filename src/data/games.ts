@@ -1,18 +1,18 @@
-import FirewatchImg from '../assets/review_images/firewatch.jpg'
+import FirewatchImg from '../assets/review_images/Firewatch/banner.jpg'
 import FirewatchIntro from '../assets/review_content/Firewatch/intro.md?raw'
 
-import TombRaiderImg from '../assets/review_images/tbtrilogy.avif'
+import { tombRaiderImages } from '../assets/review_images/TombRaiders/srcsets'
 import TombRaiderIntro from '../assets/review_content/TombRiderTrilogy/intro.md?raw'
 
-import LifeIsStrangeImg from '../assets/review_images/lifeisstrange.jpg'
+import LifeIsStrangeImg from '../assets/review_images/LifeIsStrange/banner.jpg'
 import LifeIsStrangeIntro from '../assets/review_content/LifeIsStrange/intro.md?raw'
 
-import { Content as FirewatchReview } from '../assets/review_content/Firewatch/review.md';
+import { Content as FirewatchReview } from '../assets/review_content/Firewatch/review.mdx';
 import { Content as TombRaiderReview } from '../assets/review_content/TombRiderTrilogy/review.md';
-import { Content as TombRaider } from '../assets/review_content/TombRiderTrilogy/TombRider.md';
-import { Content as Rise } from '../assets/review_content/TombRiderTrilogy/RiseOfTheTombRider.md';
-import { Content as Shadow } from '../assets/review_content/TombRiderTrilogy/ShadowOfTheTombRider.md';
-import { Content as LifeIsStrangeReview } from '../assets/review_content/LifeIsStrange/review.md';
+import { Content as TombRaider } from '../assets/review_content/TombRiderTrilogy/TombRider.mdx';
+import { Content as Rise } from '../assets/review_content/TombRiderTrilogy/RiseOfTheTombRider.mdx';
+import { Content as Shadow } from '../assets/review_content/TombRiderTrilogy/ShadowOfTheTombRider.mdx';
+import { Content as LifeIsStrangeReview } from '../assets/review_content/LifeIsStrange/review.mdx';
 
 export const games = [
   { slug: 'firewatch', 
@@ -28,8 +28,9 @@ export const games = [
     title: 'TOMB RAIDER : The survivor trilogy',
     genre: 'Action | Adventure',
     intro: TombRaiderIntro,
-    image: TombRaiderImg.src,
-    review: [TombRaider, Rise, Shadow, TombRaiderReview]
+    image: tombRaiderImages.banner.src,
+    imageSrcset: tombRaiderImages.banner.srcset,
+    review: [TombRaider, Rise, Shadow, TombRaiderReview],
   },
 
   { slug: 'life-is-strange',

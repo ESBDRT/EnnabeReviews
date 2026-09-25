@@ -35,6 +35,7 @@ h2, .section-title { font-size: 16px; font-weight: 550; letter-spacing: -0.3px; 
 .card-title { margin-top: 12px; font-size: 17px; font-weight: 550; letter-spacing: -0.35px; }
 
 .review-cover { display: block; width: 100%; height: auto; }
+.review-screenshot { display: block; width: 100%; height: auto; margin-block: 32px; border-radius: 7px; }
 .review-prose { line-height: 1.8; }
 .review-prose p { margin-block: 16px; white-space: pre-line; }
 .review-prose h2 { font-size: larger; font-weight: bold; margin-top: 24px; }
