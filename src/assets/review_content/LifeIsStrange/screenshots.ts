@@ -13,4 +13,12 @@ export const screenshots = [
     ...lifeIsStrangeImages.s3,
     alt: 'Max watching Chloe on her bed in a room filled with posters and photographs',
   },
+  {
+    ...lifeIsStrangeImages.s4,
+    alt: 'A photograph of Max and Chloe posing together at sunset',
+  },
+  {
+    ...lifeIsStrangeImages.s5,
+    alt: 'Max and Chloe lying on railway tracks, seen from above',
+  },
 ];
