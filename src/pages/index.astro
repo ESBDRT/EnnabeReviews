@@ -1,16 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Gamecard from '../components/Gamecard.astro';
+import SearchBar from '../components/SearchBar.astro';
 import { games } from '../data/games';
+
+const latestReview = games.find((game) => game.slug === 'life-is-strange');
 ---
 
 <Layout>
-  <section class="home-intro" aria-labelledby="intro-title">
-    <h1 id="intro-title">Find your next game.</h1>
-    <p>My personal thoughts and opinions on games i've played, written my own way (i can't write for shit)</p>
-    <a class="explore-reviews" href="/collection/">Explore all reviews</a>
+  {latestReview && (
+    <article class="latest-review review-card" aria-labelledby="latest-review-title">
+      <a class="card-link latest-review-link" href={`/${latestReview.slug}/`}>
+        <div class="latest-review-art">
+          <img src={latestReview.image} alt={latestReview.title} fetchpriority="high" decoding="async" />
+        </div>
+        <div class="latest-review-content">
+          <p class="eyebrow">Latest review</p>
+          <h2 class="card-title" id="latest-review-title">{latestReview.title}</h2>
+          <p class="latest-review-intro">{latestReview.intro}</p>
+          <span class="latest-review-cta">Read review <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </article>
+  )}
+  <section id="reviews" aria-labelledby="reviews-title">
+    <SearchBar />
+    <div class="review-grid" id="review-results">
+      {games.map((game) => <Gamecard {...game} />)}
+    </div>
   </section>
-  <div class="review-grid" id="review-results">
-    {games.map((game) => <Gamecard {...game} />)}
-  </div>
 </Layout>
+
+<style>
+  .latest-review { margin-top: 32px; }
+  .latest-review-link { display: grid; grid-template-columns: 1fr 1fr; }
+  .latest-review-art { min-width: 0; border-right: 1px solid var(--border); }
+  .latest-review-art img { display: block; width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .latest-review-content { display: grid; align-content: center; gap: 16px; padding: clamp(24px, 4vw, 40px); }
+  .latest-review-content .card-title { margin: 0; font-size: clamp(26px, 3vw, 36px); }
+  .latest-review-intro { color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .latest-review-cta { font-size: 14px; font-weight: 550; }
+
+  @media (max-width: 760px) {
+    .latest-review-link { grid-template-columns: 1fr; }
+    .latest-review-art { border-right: 0; border-bottom: 1px solid var(--border); }
+  }
+</style>

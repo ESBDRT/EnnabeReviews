@@ -6,6 +6,5 @@ const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
     <a class="logo" href="/" aria-label="EnNaBe Game Reviews home">EnNaBe Game Reviews</a>
     <nav aria-label="Main navigation">
         <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a>
-        <a href="/collection/" aria-current={pathname === '/collection' ? 'page' : undefined}>Reviews</a>
     </nav>
 </header>
