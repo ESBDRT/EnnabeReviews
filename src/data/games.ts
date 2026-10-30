@@ -6,6 +6,8 @@ import TombRaiderIntro from '../assets/review_content/TombRiderTrilogy/intro.md?
 
 import LifeIsStrangeImg from '../assets/review_images/LifeIsStrange/banner.jpg'
 import LifeIsStrangeIntro from '../assets/review_content/LifeIsStrange/intro.md?raw'
+import { clairObscurImages } from '../assets/review_images/ClairObscur/srcsets'
+import ClairObscurIntro from '../assets/review_content/ClairObscur/intro.md?raw'
 
 import { Content as FirewatchReview } from '../assets/review_content/Firewatch/review.mdx';
 import { Content as TombRaiderReview } from '../assets/review_content/TombRiderTrilogy/review.md';
@@ -13,6 +15,7 @@ import { Content as TombRaider } from '../assets/review_content/TombRiderTrilogy
 import { Content as Rise } from '../assets/review_content/TombRiderTrilogy/RiseOfTheTombRider.mdx';
 import { Content as Shadow } from '../assets/review_content/TombRiderTrilogy/ShadowOfTheTombRider.mdx';
 import { Content as LifeIsStrangeReview } from '../assets/review_content/LifeIsStrange/review.mdx';
+import { Content as ClairObscurReview } from '../assets/review_content/ClairObscur/review.mdx';
 
 export const games = [
   { slug: 'firewatch', 
@@ -39,5 +42,14 @@ export const games = [
     intro: LifeIsStrangeIntro,
     image: LifeIsStrangeImg.src,
     review: [LifeIsStrangeReview]
+  },
+
+  { slug: 'clair-obscur',
+    title: 'Clair Obscur : Expedition 33',
+    genre: 'RPG | Adventure',
+    intro: ClairObscurIntro,
+    image: clairObscurImages.bannerobscur.src,
+    imageSrcset: clairObscurImages.bannerobscur.srcset,
+    review: [ClairObscurReview],
   },
 ];

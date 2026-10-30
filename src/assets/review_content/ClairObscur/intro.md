@@ -1,0 +1,1 @@
+Cursed by a yearly event named Gommage, follow the adventures of the Expedition 33, trying to break the never lasting curse of the residents of Lumiere.
