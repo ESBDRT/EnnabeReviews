@@ -39,6 +39,10 @@ h2 { font-size: 16px; font-weight: 550; letter-spacing: -0.3px; }
 .review-prose a { text-decoration: underline; overflow-wrap: anywhere; }
 .review-rating { font-weight: bold; font-size: larger; }
 .review-heading { display: grid; gap: 16px; padding-block: 32px; }
+.soundtrack { display: grid; gap: 12px; margin: 24px 0 0; padding: 16px 20px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); }
+.soundtrack-credit { color: var(--muted); font-size: 13px; }
+.soundtrack-title { color: var(--text); font-weight: 550; }
+.soundtrack audio { width: 100%; color-scheme: dark; }
 .page-heading { display: grid; gap: 16px; padding-block: 32px; }
 .search-panel { display: grid; gap: 12px; margin-bottom: 24px; }
 .search-panel label { font-size: 13px; color: var(--muted); }

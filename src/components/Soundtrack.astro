@@ -1,0 +1,17 @@
+---
+interface Props {
+  src: string;
+  title: string;
+  artist: string;
+}
+
+const { src, title, artist } = Astro.props;
+---
+
+<figure class="soundtrack">
+  <figcaption>
+    <p class="eyebrow">Soundtrack</p>
+    <p class="soundtrack-credit"><span class="soundtrack-title">{title}</span> · {artist}</p>
+  </figcaption>
+  <audio controls preload="none" src={src}></audio>
+</figure>

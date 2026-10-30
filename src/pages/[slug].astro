@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Soundtrack from "../components/Soundtrack.astro";
 
 import { games } from "../data/games";
 
@@ -10,7 +11,7 @@ export function getStaticPaths() {
   }));
 }
 
-const { title, intro, image, imageSrcset, genre, rating, review } = Astro.props;
+const { title, intro, image, imageSrcset, genre, rating, review, soundtrack } = Astro.props;
 ---
 
 <Layout>
@@ -28,6 +29,7 @@ const { title, intro, image, imageSrcset, genre, rating, review } = Astro.props;
             alt={title}
             fetchpriority="high"
         />
+    {soundtrack && <Soundtrack {...soundtrack} />}
     <div class="article-layout">
         <div class="review-prose">
             {review.map((Review) => <Review />)}
