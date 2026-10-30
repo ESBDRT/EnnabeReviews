@@ -8,6 +8,8 @@ import LifeIsStrangeImg from '../assets/review_images/LifeIsStrange/banner.jpg'
 import LifeIsStrangeIntro from '../assets/review_content/LifeIsStrange/intro.md?raw'
 import { clairObscurImages } from '../assets/review_images/ClairObscur/srcsets'
 import ClairObscurIntro from '../assets/review_content/ClairObscur/intro.md?raw'
+import { pragmataImages } from '../assets/review_images/Pragmata/srcsets'
+import PragmataIntro from '../assets/review_content/Pragmata/intro.md?raw'
 
 import { Content as FirewatchReview } from '../assets/review_content/Firewatch/review.mdx';
 import { Content as TombRaiderReview } from '../assets/review_content/TombRiderTrilogy/review.md';
@@ -16,6 +18,7 @@ import { Content as Rise } from '../assets/review_content/TombRiderTrilogy/RiseO
 import { Content as Shadow } from '../assets/review_content/TombRiderTrilogy/ShadowOfTheTombRider.mdx';
 import { Content as LifeIsStrangeReview } from '../assets/review_content/LifeIsStrange/review.mdx';
 import { Content as ClairObscurReview } from '../assets/review_content/ClairObscur/review.mdx';
+import { Content as PragmataReview } from '../assets/review_content/Pragmata/review.mdx';
 
 export const games = [
   { slug: 'firewatch', 
@@ -51,5 +54,14 @@ export const games = [
     image: clairObscurImages.bannerobscur.src,
     imageSrcset: clairObscurImages.bannerobscur.srcset,
     review: [ClairObscurReview],
+  },
+
+  { slug: 'pragmata',
+    title: 'Pragmata',
+    genre: 'Action | Adventure',
+    intro: PragmataIntro,
+    image: pragmataImages.banner.src,
+    imageSrcset: pragmataImages.banner.srcset,
+    review: [PragmataReview],
   },
 ];

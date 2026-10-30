@@ -1,0 +1,1 @@
+Stranded on a lunar research station, Hugh teams up with Diana, a mysterious android girl, to find a way back to Earth.
